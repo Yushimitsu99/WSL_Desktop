@@ -1,4 +1,4 @@
-# Sequence diagram
+# Sequence Diagram
 
 This diagram describes the interaction to start a WSL instance and install an application.
 
@@ -17,14 +17,14 @@ sequenceDiagram
     Manager ->> WSL: start()
     WSL -->> Manager: Instance started
     Manager -->> VM: Instance started
-    VM -->> UI: Show started instance
+    VM -->> UI: Display instance started
 
-    User ->> UI: Ask to install the application
+    User ->> UI: Request to install application
     UI ->> VM: installApp(distributionName, appName)
     VM ->> Manager: installApp(distributionName, appName)
     Manager ->> Installer: installApp(WSL, appName)
-    Install ->> WSL: sudo apt update && sudo apt install -y appName
-    WSL -->> Install: Application installed
-    Install -->> Manager: Application installed
+    Installer ->> WSL: sudo apt update && sudo apt install -y appName
+    WSL -->> Installer: Application installed
+    Installer -->> Manager: Application installed
     Manager -->> VM: Application installed
-    VM -->> UI: Show installed application
+    VM -->> UI: Display application installed
