@@ -1,6 +1,6 @@
-# Diagramme de Séquence
+# Sequence diagram
 
-Ce diagramme décrit l'interaction pour démarrer une instance WSL et installer une application.
+This diagram describes the interaction to start a WSL instance and install an application.
 
 ```mermaid
 sequenceDiagram
@@ -11,20 +11,20 @@ sequenceDiagram
     participant WSL as WSLInstance
     participant Installer as ApplicationInstaller
 
-    User ->> UI: Demander à démarrer l'instance WSL
+    User ->> UI: Request to start WSL instance
     UI ->> VM: startWSL(distributionName)
     VM ->> Manager: startWSL(distributionName)
     Manager ->> WSL: start()
-    WSL -->> Manager: Instance démarrée
-    Manager -->> VM: Instance démarrée
-    VM -->> UI: Afficher instance démarrée
+    WSL -->> Manager: Instance started
+    Manager -->> VM: Instance started
+    VM -->> UI: Show started instance
 
-    User ->> UI: Demander à installer l'application
+    User ->> UI: Ask to install the application
     UI ->> VM: installApp(distributionName, appName)
     VM ->> Manager: installApp(distributionName, appName)
     Manager ->> Installer: installApp(WSL, appName)
-    Installer ->> WSL: sudo apt update && sudo apt install -y appName
-    WSL -->> Installer: Application installée
-    Installer -->> Manager: Application installée
-    Manager -->> VM: Application installée
-    VM -->> UI: Afficher application installée
+    Install ->> WSL: sudo apt update && sudo apt install -y appName
+    WSL -->> Install: Application installed
+    Install -->> Manager: Application installed
+    Manager -->> VM: Application installed
+    VM -->> UI: Show installed application
