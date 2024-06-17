@@ -17,12 +17,12 @@ init: {
 }%%
 %% A Mermaid Use Case Diagram %%
 graph TD
-    actor User
-    User --|Start/Stop/Delete WSL Instances|> UICase
-    User --|Install Applications on WSL|> InstallCase
-    User --|Monitor RAM & CPU Usage|> MonitorCase
-    User --|Transfer Files to WSL|> TransferCase
-    subgraph WSL Interface
+    actor User as User
+    User -- Start/Stop/Delete WSL Instances --> UICase
+    User -- Install Applications on WSL --> InstallCase
+    User -- Monitor RAM & CPU Usage --> MonitorCase
+    User -- Transfer Files to WSL --> TransferCase
+    subgraph "WSL Interface"
         UICase(Start/Stop/Delete WSL Instances)
         InstallCase(Install Applications on WSL)
         MonitorCase(Monitor RAM & CPU Usage)
