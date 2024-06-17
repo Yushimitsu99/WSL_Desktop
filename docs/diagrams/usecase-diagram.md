@@ -7,17 +7,19 @@ This diagram illustrates the interactions between a user and the WSL interface t
 init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#ffcc00',
-    'edgeLabelBackground':'#ffffff',
-    'actorBorder': '#000000',
-    'actorBkg': '#ffcc00',
-    'actorTextColor': '#000000'
+    'primaryColor': '#858E90',    
+    'primaryTextColor': '#ffffff', 
+    'primaryBorderColor': '#2a3137',
+    'secondaryBorderColor': '#485663', 
+    'lineColor': '#485663', 
+    'secondaryColor': '#86a3b4',   
+    'tertiaryColor': '#99b4b7', 
+    'tertiaryTextColor': '#ffffff', 
+    'tertiaryBorderColor': '#becbce' 
   }
 }
 }%%
-%% A Mermaid Use Case Diagram %%
 graph TD
-    actor User as User
     User -- Start/Stop/Delete WSL Instances --> UICase
     User -- Install Applications on WSL --> InstallCase
     User -- Monitor RAM & CPU Usage --> MonitorCase
