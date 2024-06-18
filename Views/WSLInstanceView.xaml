@@ -11,16 +11,32 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="70*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" CornerRadius="20" Margin="10">
-            <Border.Background>
-                <ImageBrush ImageSource="pack://application:,,,/Assets/wslmanagerbg.png" Stretch="UniformToFill"/>
-            </Border.Background>
-            <TextBlock Text="Active WSL" FontSize="30" Margin="30 10" Foreground="#ffffff"/>
+        <Border Grid.Row="0" Style="{StaticResource ImageBackgroundBorderStyle}">
+            <StackPanel Margin="30 10">
+                <TextBlock Text="Active WSL" FontSize="26" Foreground="#ffffff"/>
+                <TextBlock Text="Ubuntu 22.04" FontSize="18" Foreground="#ffffff" />
+            </StackPanel>
         </Border>
-        <Border Grid.Row="1" CornerRadius="20" Margin="10">
-            <Border.Background>
-                <ImageBrush ImageSource="pack://application:,,,/Assets/wslmanagerbg.png" Stretch="UniformToFill"/>
-            </Border.Background>
+        <Border Grid.Row="1" Style="{StaticResource ImageBackgroundBorderStyle}">
+            <StackPanel Margin="30 10">
+                <TextBlock Text="Applications List" FontSize="26" Foreground="#ffffff"/>
+                <ListView ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0 10">
+                    <ListViewItem Content="Toto"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tutu"/>
+                    <ListViewItem Content="Tartampion"/>
+
+                </ListView>
+            </StackPanel>
         </Border>
     </Grid>
 </UserControl>

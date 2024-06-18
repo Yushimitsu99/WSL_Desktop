@@ -24,5 +24,15 @@ namespace WSL_Desktop.Views
         {
             InitializeComponent();
         }
+
+        private void ListView_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
+
+        private void ListView_Scroll_1(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }
