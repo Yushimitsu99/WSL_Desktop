@@ -1,0 +1,53 @@
+﻿<Window x:Class="WSL_Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSL_Desktop"
+        xmlns:views="clr-namespace:WSL_Desktop.Views"
+        mc:Ignorable="d"
+        Style="{StaticResource MainWindowStyle}"
+        Title="WSL Desktop" Width="1300" Height="700" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" x:Name="SideBar" BorderBrush="Black" BorderThickness="0 0 1 0">
+            <!-- SideBar Content -->
+        </Border>
+        <Grid Grid.Column="1" x:Name="MainContent" Margin="20 30">
+            <!-- Main Content -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="45*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="40*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <views:WSLInstanceView  Grid.Column="0"/>
+                <!-- WSL Instance View -->
+
+                <views:ApplicationInstallerView Grid.Column="1"/>
+                <!-- Application Installer View -->
+
+                <views:WSLManagerView Grid.Column="2"/>
+                <!-- WSL Manager View -->
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <views:FileTransferView Grid.Column="0"/>
+                <!-- File Transfer View -->
+                <views:ResourceMonitorView Grid.Column="1"/>
+                <!-- Resource Monitor View -->
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

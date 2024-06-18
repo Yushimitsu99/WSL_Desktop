@@ -8,4 +8,25 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\darkbg.png" />
+    <None Remove="Assets\wslmanagerbg.png" />
+    <None Remove="Resources\mainwindowbg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\darkbg.png" />
+    <Resource Include="Assets\wslmanagerbg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\mainwindowbg.png" />
+  </ItemGroup>
+
 </Project>
